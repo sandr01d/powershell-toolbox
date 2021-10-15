@@ -79,7 +79,7 @@ None. You can not pipe objects to Remove-Junk
 .OUTPUTS
 None
 .EXAMPLE
-PS> Remove-Junk -Path .\packages.json -DryRun $false
+PS> Remove-Junk -PackageFile .\packages.json -DryRun
 #>
 function Remove-Junk {
     [CmdletBinding()]

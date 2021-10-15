@@ -1,4 +1,10 @@
-﻿function Switch-DarkMode {
+﻿<#
+.SYNOPSIS
+Switches the system-wide dark mode to the state it currently does not have.
+.EXAMPLE
+PS> Switch-DarkMode
+#>
+function Switch-DarkMode {
     $Path = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
     $Name = "AppsUseLightTheme"
     $Property = Get-ItemProperty -Path $Path -Name $Name
