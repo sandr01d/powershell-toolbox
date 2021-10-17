@@ -32,40 +32,6 @@ function Remove-Package {
 
 <#
 .SYNOPSIS
-Removes the package (regular program) if present
-.PARAMETER PackageName
-The name of the package to remove
-.PARAMETER DryRun
-If set to true, only the names of the apps are printed, but nothing is removed.
-#>
-function Remove-Program {
-    param (
-        # Name of the program to remove
-        [string]
-        [Parameter(Mandatory = $true)]
-        $ProgramName,
-        [Parameter(Mandatory = $true)]
-        [bool]
-        $DryRun = $false
-    )
-    
-    $program = Get-Package -ProviderName Programs -IncludeWindowsInstaller |
-    Where-Object { $_.Name -like $ProgramName }
-    
-    if ($null -ne $program) {
-        Write-Host Removing $program.Name -ForegroundColor Green
-        if (!$DryRun) {
-            $program.Uninstall()
-        }
-    }
-    else {
-        Write-Host "A program that matches '$ProgramName'`
-        could not be found" -ForegroundColor Yellow
-    }
-}
-
-<#
-.SYNOPSIS
 Removes unwanted programs
 .DESCRIPTION
 Removes the packages and AppXPackages defined
@@ -97,11 +63,6 @@ function Remove-Junk {
     # Iterate over all packages and remove them
     foreach ($PackageName in $json.packages) {
         Remove-Package -PackageName $PackageName -DryRun $DryRun
-    }
-
-    # Iterate over all programs and remove them
-    foreach ($ProgramName in $json.programs) {
-        Remove-Program -programName $ProgramName -dryRun $DryRun
     }
 }
 
