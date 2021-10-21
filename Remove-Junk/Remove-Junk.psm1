@@ -12,7 +12,6 @@ function Remove-Package {
         [string]
         [Parameter(Mandatory = $true)]
         $PackageName,
-        [Parameter(Mandatory = $true)]
         [bool]
         $DryRun = $false
     )
