@@ -9,6 +9,13 @@ Tested on: Linux, Windows
 
 Verifies a files checksum. Useful for verifying integrity of files downloaded from the internet.
 
+## Lock-File
+
+Supported Platforms: Cross Platform  
+Tested on: Windows
+
+Opens a file so it can't be accessed by other applications. Useful for debugging sharing violations.
+
 ## Remove-Junk
 
 Supported Platforms: Windows  
@@ -23,4 +30,3 @@ Supported Platforms: Windows
 Tested on: Windows
 
 Switches the system wide dark mode on or off (depending on the current state).
-

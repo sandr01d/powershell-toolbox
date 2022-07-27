@@ -33,11 +33,12 @@ Description = 'A collection of useful Powershell Cmdlets'
 NestedModules = @(
     '.\Remove-Junk\Remove-Junk.psm1',
     '.\Switch-DarkMode\Switch-DarkMode.psm1',
-    '.\Confirm-Checksum\Confirm-Checksum.psm1'
+    '.\Confirm-Checksum\Confirm-Checksum.psm1',
+    '.\Lock-File\Lock-File.psm1'
     )
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = @("Remove-Junk", "Switch-DarkMode", "Confirm-Checksum")
+FunctionsToExport = @("Remove-Junk", "Switch-DarkMode", "Confirm-Checksum", "Lock-File")
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = ''
