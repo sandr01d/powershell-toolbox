@@ -1,0 +1,11 @@
+{
+    // these packages will be installed from the winget community repository
+    "winget": [
+        "HeroicGamesLauncher.HeroicGamesLauncher",
+        "Qalculate.Qalculate"
+    ],
+    // these packages will be installed from the Microsoft Store
+    "store": [
+        "9NZVDKPMR9RD" // Mozilla Firefox
+    ]
+}
