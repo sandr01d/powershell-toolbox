@@ -25,7 +25,7 @@ function Install-Bulk {
     foreach ($Package in $Json.store) {
         # The msstore source uses unique identifiers as the "Id" for packages.
         # These do not require the exact query option.
-        winget install --accept-source-agreements --accept-package-agreements $Package -s msstore
+        winget install --accept-source-agreements --accept-package-agreements $Package --source msstore
     }
 }
 

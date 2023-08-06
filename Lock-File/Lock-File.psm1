@@ -21,7 +21,6 @@ function Lock-File {
         $Path
     )
     $file = [System.IO.File]::OpenWrite($Path)
-    # Write-Host $Checksum
     Write-Host "Press any key to unlock file..."
     # Wait for user input
     $HOST.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") | OUT-NULL
